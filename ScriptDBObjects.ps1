@@ -2,15 +2,15 @@
 #Script all DB Objects per artifact using SMO and Powershell
 
 cls
-$path = “C:\Ryan\AdminTools\AdminTools\Src\SQL Scripts\Databases\”
-$ServerName = “U0104350-TPL-C\SERVER2014”
+$path = “” #provide destination path here 
+$ServerName = “” # provide SQL Server Name here 
 [System.Reflection.Assembly]::LoadWithPartialName(‘Microsoft.SqlServer.SMO’)
 $serverInstance = New-Object (‘Microsoft.SqlServer.Management.Smo.Server’) $ServerName
 
 $IncludeTypes = @(“Tables”,”StoredProcedures”,”Views”,”UserDefinedFunctions”,"Schemas","Synonyms","PartitionScheme","PartitionFunction" ,"Default")
 $ExcludeSchemas = @(“sys”,”Information_Schema”)
 
-$SpecificDb = “SR”
+$SpecificDb = “” # Provide name of the database to be scripted
 
 $so = new-object (‘Microsoft.SqlServer.Management.Smo.ScriptingOptions’)
 $so.IncludeIfNotExists = 0
