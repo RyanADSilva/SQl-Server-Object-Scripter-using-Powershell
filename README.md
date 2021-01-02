@@ -1,6 +1,8 @@
 # SQl-Server-Object-Scripter-using-Powershell
 
 The project uses SQL Server SMO and Powershell to extract objects from SQl Server and store then in a local file repository.
+ * Each object is stored in a seperate file
+ * Objects are stored under a Folder of the same Database object type and have the same name as the Object in the databse.
 
 ### How to use 
 
@@ -14,3 +16,6 @@ The project uses SQL Server SMO and Powershell to extract objects from SQl Serve
  
  
 * Execute the powershell script
+
+* Once the powershell script is executed the objects should be created in the location specified by $path variable.
+
